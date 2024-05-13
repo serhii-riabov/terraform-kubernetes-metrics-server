@@ -10,7 +10,7 @@ This module aims to support most of the features provided by the official [Helm 
 module "metrics_server" {
   source  = "serhii-riabov/metrics-server/kubernetes"
 
-  image_tag = "0.7.0" # Version of Metrics Server to deploy
+  image_tag = "0.7.1" # Version of Metrics Server to deploy
 }
 ```
 
@@ -22,7 +22,7 @@ Example of usage for [HA setup](https://github.com/kubernetes-sigs/metrics-serve
 module "metrics_server" {
   source  = "serhii-riabov/metrics-server/kubernetes"
 
-  image_tag                      = "0.7.0" # Version of Metrics Server to deploy
+  image_tag                      = "0.7.1" # Version of Metrics Server to deploy
   deployment_replicas            = 2
   rolling_update_max_unavailable = 1
   pdb_enabled                    = true
@@ -37,7 +37,7 @@ Example of usage with addon-resizer sidecar:
 module "metrics_server" {
   source  = "serhii-riabov/metrics-server/kubernetes"
 
-  image_tag             = "0.7.0" # Version of Metrics Server to deploy
+  image_tag             = "0.7.1" # Version of Metrics Server to deploy
   addon_resizer_enabled = true
 }
 ```
@@ -50,7 +50,7 @@ Prometheus Operator CRDs can be natively managed with Terraform via [this module
 module "metrics_server" {
   source  = "serhii-riabov/metrics-server/kubernetes"
 
-  image_tag              = "0.7.0" # Version of Metrics Server to deploy
+  image_tag              = "0.7.1" # Version of Metrics Server to deploy
   servicemonitor_enabled = true
 }
 ```
